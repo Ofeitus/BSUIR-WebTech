@@ -1,12 +1,12 @@
 package by.bsuir.webtech.lab1.task6;
 
 public class Task6 {
-    public static void printMatrix(int[][] matrix, int x, int y) {
-        for (int i = 0; i < y; i++) {
-            for (int j = 0; j < x; j++) {
-                System.out.print(matrix[i][j] + " ");
+    public static void printMatrix(int[][] matrix) {
+        for (int[] row : matrix) {
+            for (int col : row) {
+                System.out.print(col + " ");
             }
-            System.out.println("");
+            System.out.println();
         }
     }
 
@@ -24,6 +24,6 @@ public class Task6 {
             System.arraycopy(numbers, 0, matrix[i], N - i, i);
         }
 
-        printMatrix(matrix, N, N);
+        printMatrix(matrix);
     }
 }
