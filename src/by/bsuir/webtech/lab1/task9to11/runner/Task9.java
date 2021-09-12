@@ -1,10 +1,9 @@
-package by.bsuir.webtech.lab1.task9.runner;
+package by.bsuir.webtech.lab1.task9to11.runner;
 
-import by.bsuir.webtech.lab1.task9.util.Ball;
-import by.bsuir.webtech.lab1.task9.util.Basket;
-import by.bsuir.webtech.lab1.task9.util.Color;
+import by.bsuir.webtech.lab1.task9to11.util.Ball;
+import by.bsuir.webtech.lab1.task9to11.util.Basket;
+import by.bsuir.webtech.lab1.task9to11.util.Color;
 
-import java.util.DoubleSummaryStatistics;
 import java.util.Map;
 import java.util.stream.Collectors;
 

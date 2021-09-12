@@ -1,4 +1,4 @@
-package by.bsuir.webtech.lab1.task9.util;
+package by.bsuir.webtech.lab1.task9to11.util;
 
 import java.util.ArrayList;
 
