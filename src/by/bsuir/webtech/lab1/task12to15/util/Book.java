@@ -1,10 +1,19 @@
 package by.bsuir.webtech.lab1.task12to15.util;
 
-public class Book {
+public class Book implements Cloneable {
     private String title;
     private String author;
     private int price;
     private static int edition;
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        Book book = new Book();
+        book.title = this.title;
+        book.author = this.author;
+        book.price = this.price;
+        return book;
+    }
 
     @Override
     public boolean equals(Object obj) {
@@ -16,23 +25,23 @@ public class Book {
         }
 
         Book book = (Book) obj;
-        return title.equals(book.title) &&
-                author.equals(book.author) &&
-                price == book.price;
+        return this.title.equals(book.title) &&
+                this.author.equals(book.author) &&
+                this.price == book.price;
     }
 
     @Override
     public int hashCode() {
         int result = 17;
-        result = 31 * result + (title == null ? 0 : title.hashCode());
-        result = 31 * result + (author == null ? 0 : author.hashCode());
-        result = 31 * result + price;
+        result = 31 * result + (this.title == null ? 0 : this.title.hashCode());
+        result = 31 * result + (this.author == null ? 0 : this.author.hashCode());
+        result = 31 * result + this.price;
         result = 31 * result + edition;
         return result;
     }
 
     @Override
     public String toString() {
-        return title + " - " + author + ". Price: " + price;
+        return this.title + " - " + this.author + ". Price: " + this.price;
     }
 }
