@@ -1,25 +1,33 @@
 package by.bsuir.webtech.lab1.task12to15.util;
 
-import java.util.Objects;
-
 public class ProgrammerBook extends Book {
     private String language;
     private int level;
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-        if (o == null || getClass() != o.getClass())
+        if (!(o instanceof Book))
             return false;
-        if (!super.equals(o))
-            return false;
-        ProgrammerBook that = (ProgrammerBook) o;
-        return level == that.level && language.equals(that.language);
+
+        if (!(o instanceof ProgrammerBook))
+            return super.equals(o);
+
+        ProgrammerBook programmerBook = (ProgrammerBook)o;
+        return super.equals(programmerBook) &&
+                level == programmerBook.level &&
+                language.equals(programmerBook.language);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(language, level);
+        int result = super.hashCode();
+        result = 31 * result + language.hashCode();
+        result = 31 * result + level;
+        return result;
+    }
+
+    @Override
+    public String toString(){
+        return super.toString()+ "(Language  " + language + ", level: " + level + ")";
     }
 }
