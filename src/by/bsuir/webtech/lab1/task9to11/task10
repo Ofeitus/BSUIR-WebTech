@@ -1,0 +1,2 @@
+Compile: javac -sourcepath src -d bin src\by\bsuir\webtech\lab1\task9to11\runner\Task9.java
+Run: java -classpath bin by.bsuir.webtech.lab1.task9to11.runner.Task9
