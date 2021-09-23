@@ -1,0 +1,2 @@
+Create jar: BSUIR-WebTech\bin>jar cvfe lab1.jar by.bsuir.webtech.lab1.task9to11.runner.Task9 *
+Run: BSUIR-WebTech\bin>java -jar lab1.jar

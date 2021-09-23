@@ -1,7 +1,6 @@
 package by.bsuir.webtech.lab1.task4;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class Task4 {
     public static boolean isPrime(int n) {
@@ -20,16 +19,9 @@ public class Task4 {
     }
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.print("N: ");
-        int N = input.nextInt();
-        int[] numbers = new int[N];
-        for (int i = 0; i < N; i++) {
-            System.out.printf("Array[%d] = ", i);
-            numbers[i] = input.nextInt();
-        }
+        int[] numbers = new int[]{0, 2, 5, 24, 17, 101};
         System.out.print("Indices of primes: ");
-        for (int i = 0; i < N; i++) {
+        for (int i = 0; i < numbers.length; i++) {
             if (isPrime(numbers[i]))
                 System.out.print(i + " ");
         }
